@@ -2,7 +2,7 @@
   hosts: all
   become: yes
   tasks:
-    - name: MongoDB yum repo file
+    - name: MongoDB Yum repo file
       ansible.builtin.copy:
         src: mongo.repo
         dest: /etc/yum.repos.d/mongo.repo
@@ -14,7 +14,7 @@
 
     - name: Update listen address in MongoDB Configuration
       ansible.builtin.replace:
-      path: /etc/mongodb.conf
+      path: /etc/mongod.conf
       regexp: 127.0.0.0
       replace: 0.0.0.0
 
