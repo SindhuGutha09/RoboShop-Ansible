@@ -19,25 +19,3 @@
   ansible.builtin.import_tasks: systemd-setup.yml
 
 
-
-
-
-#  func_java(){
-#  log=/tmp/roboshop.log
-#  echo -e "\e[31m start ${component} service \e[0m"
-#  cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
-#  echo -e "\e[31m installing maven \e[0m"
-#  yum install maven -y &>>${log}
-#  fun_appreq
-#  echo -e "\e[34m cleaning maven package \e[0m"
-#  mvn clean package &>>${log}
-#  echo -e "\e[34m moving the ${component} files \e[0m"
-#  mv target/${component}-1.0.jar ${component}.jar &>>${log}
-#  echo -e "\e[34m uinstalling mysql files \e[0m"
-#  yum install mysql -y &>>${log}
-#  echo -e "\e[34m loading the schema files \e[0m"
-#  mysql -h mysql.sgdevrobo.online -uroot -pRoboShop@1 < /app/schema/${component}.sql &>>${log}
-#  systemctl enable ${component} &>>${log}
-#  systemctl restart ${component} &>>${log}
-#
-#}
