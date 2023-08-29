@@ -3,7 +3,7 @@ Description = User Service
 [Service]
 User=roboshop
 Environment=MONGO=true
-Environment=redis.sgdevrobo.online
+Environment=redis-dev.sgdevrobo.online
 Environment=MONGO_URL="mongodb://mongodb-dev.sgdevrobo.online:27017/users"
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=user
