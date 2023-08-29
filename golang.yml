@@ -6,7 +6,6 @@
 - name: App Pre-requisites
   ansible.builtin.import_tasks: app-preq.yml
 
-
 - name: Initialize Go module
   ansible.builtin.shell: go mod init dispatch
   args:
@@ -22,6 +21,6 @@
   args:
       chdir: /app
 
-- name: Schema Setup
+- name: SystemD Setup
   ansible.builtin.import_tasks: systemd-setup.yml
 
